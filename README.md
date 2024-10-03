@@ -6,7 +6,7 @@ This app generates a notes template from a CSV file containing specific topics a
 
 ## Features
 
-- Generates a PDF template with a heading for specific topics and a page count.
+- Generates a PDF template with a heading for specific topics and pages for each topic.
 - Designed to be printed out and used as a notebook for writing content related to each topic.
 
 ## How to Use
