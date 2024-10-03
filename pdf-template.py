@@ -13,8 +13,14 @@ for index, row in topics.iterrows():
     pdf.set_font('Courier', 'B', 24)
     pdf.set_text_color(100, 100, 100)
     pdf.cell(w=0, h=12, txt=row['Topic'])
-    pdf.line(11, 22, 198, 22)
-
+    pdf.line(10, 21, 200, 21)
+    pdf.line(10, 22, 200, 22)
+    for y in range(30, 290, 10):
+        pdf.line(15, y, 200, y)
+        pdf.ln(5)
+        # Add a bullet point
+        pdf.set_font('Arial', '', 20)
+        pdf.cell(10, y, txt=chr(149), ln=0)
     #set footer
     pdf.set_y(-15)
     pdf.set_font('Arial', 'I', 8)
@@ -23,6 +29,12 @@ for index, row in topics.iterrows():
     for i in range(row['Pages'] - 1):
         pdf.add_page()
 
+        for y in range(30, 290, 10):
+            pdf.line(15, y, 200, y)
+            pdf.ln(5)
+            # Add a bullet point
+            pdf.set_font('Arial', '', 20)
+            pdf.cell(10, y, txt=chr(149), ln=0)
         #set footer
         pdf.set_y(-15)
         pdf.set_font('Arial', 'I', 8)
